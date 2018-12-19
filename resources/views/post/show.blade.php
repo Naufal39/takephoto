@@ -19,6 +19,7 @@
             </div>
                 </div>
                 <br>
+
                  <div class="card">
                 <div class="card-header">Tambahkan Komentar</div>
 
@@ -42,15 +43,46 @@
                     </div>    
 
                     <div class="form-group">
-                        <input type="submit" value="Komentar" class="btn btn-ptimary">
+                        <input type="submit" value="Komentar" class="btn btn-primary">
                     </div>
                 </form>
             </div>
                 </div>
             </div>
+
+            <div class="card-body">
+            <div class="contact" id="contact">
+		<div class="container">
+			<h3 class="title-w3l">Pesan Sekarang</h3>
+				<div class="contact-grid1">
+					<div class="contact-top1">
+						<form action="#" method="post">
+							<div class="form-group">
+								<label>Name*</label>
+								<input type="text" name="Name" placeholder="Name" required="">
+							</div>
+							<div class="form-group">
+								<label>E-mail*</label>
+								<input type="email" name="E-mail" placeholder="E-mail" required="">
+							</div>
+							<div class="form-group">
+								<label>Phone Number*</label>
+								<input type="text" name="number" placeholder="Phone Number" required="">
+							</div>
+							<div class="form-group">
+								<label>Message*</label>
+									<textarea name="Message" placeholder="Message" required=""></textarea>
+							</div>
+								<input type="submit" value="Send" class="btn btn-ptimary" >
+						</form>
+					</div>
+				</div>
+		</div>
+	</div>
+    </div>
         </div>
     </div>
 </div>
 
-
+    
 @endsection

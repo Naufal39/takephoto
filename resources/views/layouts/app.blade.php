@@ -55,6 +55,8 @@
                             <li><a class="navbar-brand" href="{{ route('post.create') }}"> Write a Blog </a></li>
 
                             <li><a class="navbar-brand" href="{{ route('post.index') }}"> Post </a></li>
+                            
+                            <li><a class="navbar-brand" href="{{ route('konten.galeri') }}"> Galery </a></li>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -62,6 +64,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                       <a href="{{ route('post.profile') }}" class="dropdown-item" >Profile</a>    
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -71,6 +74,7 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+                                        
                                 </div>
                             </li>
                         @endguest

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Categories;
+use App\User;
 
 
 class PostController extends Controller
@@ -93,5 +94,9 @@ class PostController extends Controller
 
     public function show(Post $post){
         return view('post.show', compact('post'));
+    }
+
+    public function galeri(){
+        return view('konten.galeri');
     }
 }

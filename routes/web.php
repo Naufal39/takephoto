@@ -28,3 +28,5 @@ Route::patch('post/{post}/edit','PostController@update')->name('post.update');
 Route::delete('post/{post}/delete', 'PostController@destroy')->name('post.destroy');
 Route::post('post/{post}/comment', 'PostCommentController@store')->name('post.comment.store');
 Route::get('query', 'CariController@search')->name('post.result');
+Route::get('/galeri/','PostController@galeri')->name('konten.galeri');
+Route::get('user/profile/', 'ProfileController@profile')->name('post.profile');

@@ -1,4 +1,32 @@
-<div class="header-w3layouts"> 
+
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+       <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Meta tag Keywords -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="STakePhoto web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--// Meta tag Keywords -->
+<!-- css files -->
+<link rel="stylesheet" href="css/bootstrap.css"> <!-- Bootstrap-Core-CSS -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> <!-- Style-CSS --> 
+<link rel="stylesheet" href="css/font-awesome.css"> <!-- Font-Awesome-Icons-CSS -->
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" /> <!-- Flexslider-CSS -->
+<link href="css/simpleLightbox.css" rel="stylesheet" type="text/css" />
+<!-- //css files -->
+<!-- online-fonts -->
+<link href="//fonts.googleapis.com/css?family=Philosopher:400,400i,700,700i" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+<!-- //online-fonts -->
+    </head>
+    <body>
+
+        <div class="header-w3layouts"> 
 		<!-- Navigation -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="navbar-header page-scroll">
@@ -15,29 +43,34 @@
 				<ul class="nav navbar-nav navbar-right">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     @guest
+                           <li class="hidden"><a class="page-scroll" href="#page-top"></a>	</li>
+					<li><a class="page-scroll scroll" href="#about"> <strong>About</strong> </a></li>
+					<li><a class="page-scroll scroll" href="{{ route('post.index') }}"> <strong>Post</strong> </a></li>
+                    <li><a class="page-scroll scroll" href="{{route('konten.galeri')}}"> <strong>Gallery</strong> </a></li>
+                    <li><a class="page-scroll scroll" href="{{url('konten/filter')}}"> <strong>Filter</strong> </a></li>
+                    <li><a class="page-scroll scroll" href="#mail"> <strong>Mail Us</strong> </a></li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}"> <strong> {{ __('Login') }} </strong> </a>
                             </li>
                             <li class="nav-item">
                                 @if (Route::has('register'))
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}"> <strong> {{ __('Register') }} </strong>  </a>
                                 @endif
                             </li>
                         @else
 					<li class="hidden"><a class="page-scroll" href="#page-top"></a>	</li>
-					<li class="active"><a class="page-scroll" href="#home">Home</a></li>
-					<li><a class="page-scroll scroll" href="#about">About</a></li>
-					<li><a class="page-scroll scroll" href="#services">Services</a></li>
-					<li><a class="page-scroll scroll" href="{{ route('post.index') }}">Post</a></li>
-					<li><a class="page-scroll scroll" href="{{route('konten.galeri')}}">Gallery</a></li>
-                    <li><a class="page-scroll scroll" href="#mail">Mail Us</a></li>
+					<li><a class="page-scroll scroll" href="#about"> <strong>About</strong> </a></li>
+					<li><a class="page-scroll scroll" href="{{ route('post.index') }}"> <strong>Post</strong> </a></li>
+                    <li><a class="page-scroll scroll" href="{{route('konten.galeri')}}"> <strong>Gallery</strong> </a></li>
+                    <li><a class="page-scroll scroll" href="{{url('konten/filter')}}"> <strong>Filter</strong> </a></li>
+                    <li><a class="page-scroll scroll" href="#mail"> <strong>Mail Us</strong> </a></li>
                     <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a href="{{ route('post.profile') }}" class="dropdown-item" >Profile</a> 
+                                    <a href="{{ route('post.profile',Auth::user()->id) }}" class="dropdown-item" >Profile</a> 
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -56,3 +89,6 @@
 			<!-- /.navbar-collapse -->
 		</nav>  
     </div>
+        
+    </body>
+    </html>

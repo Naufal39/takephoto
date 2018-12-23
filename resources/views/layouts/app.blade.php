@@ -43,6 +43,12 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+                            <li><a class="navbar-brand" href="{{ route('post.index') }}"> Post </a></li>
+                            
+                            <li><a class="navbar-brand" href="{{ route('konten.galeri') }}"> Galery </a></li>
+
+                            <li><a class="navbar-brand" href="{{ url('konten/filter') }}"> Filter </a></li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
@@ -58,13 +64,15 @@
                             
                             <li><a class="navbar-brand" href="{{ route('konten.galeri') }}"> Galery </a></li>
 
+                            <li><a class="navbar-brand" href="{{ url('konten/filter') }}"> Filter </a></li>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                       <a href="{{ route('post.profile') }}" class="dropdown-item" >Profile</a>    
+                                       <a href="{{route('post.profile',Auth::user()->id)}}" class="dropdown-item" >Profile</a>    
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

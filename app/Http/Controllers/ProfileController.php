@@ -11,4 +11,9 @@ class ProfileController extends Controller
 
        return view('post.profile', compact('user'));
     }
+
+    public function photoprofile(User $user){
+
+       return view('post.kangphoto', compact('user'));
+    }
 }

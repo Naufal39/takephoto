@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 @section('js')
 <script type="text/javascript">
 
@@ -20,10 +24,6 @@
 </script>
 
 @stop
-
-@extends('layouts.app')
-
-@section('content')
     <div class="container">
         <form class="" action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">
         {{csrf_field()}}

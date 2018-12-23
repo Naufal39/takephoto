@@ -82,7 +82,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
     </head>
     <body>
         <div>
-            @if (Route::has('login'))
+            {{-- @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
@@ -94,7 +94,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif --}}
 
                 <div class="main-agile">
 <div class="w3l-overlay">
@@ -124,7 +124,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									<p>Kami menyediakan</p>
 									<h3>PESAN JASA PHOTO</h3>
 									<div class="agileits_w3layouts_more menu__item">
-										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">Find More</a>
+										<a href="{{route('post.index')}}">Find More</a>
 									</div>
 								</div>	
 							</div>
@@ -137,7 +137,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 									<p>Kami menyediakan</p>
 									<h3>FILTER PHOTO</h3>
 									<div class="agileits_w3layouts_more menu__item">
-										<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">Find More</a>
+										<a href="{{url('konten/filter')}}">Find More</a>
 									</div>
 								</div>
 							</div>
@@ -191,6 +191,36 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		<div class="clearfix"> </div>
 	</div>
 	<!-- //Contact -->
+
+	<br> <br>
+	<div class="footer w3ls">
+	<div class="container">
+			<div class="ftr-menu">
+				 <ul>
+					<li><a class="scroll" href="#home">Home </a></li>
+					<li><a class="scroll" href="#about">About</a></li>
+					<li><a class="scroll" href="#services">Services</a></li>
+					<li><a class="scroll" href="#team">Team</a></li>
+					<li><a class="scroll" href="#gallery">Gallery</a></li>
+					<li><a class="scroll" href="#contact">Contact Us</a></li>
+				 </ul>
+			</div>
+			<div class="w3ls-social-icons-2">
+				<a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+				<a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+				<a class="pinterest" href="#"><i class="fa fa-google-plus"></i></a>
+				<a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+				<a class="tumblr" href="#"><i class="fa fa-tumblr"></i></a>
+			</div>
+			<div class="logo-fo">
+				<h2><a href="index.html">TakePhoto</a></h2>
+			</div>
+			<div class="clearfix"> </div>
+	</div>
+</div>
+<div class="copyrights">
+	<p>&copy; 2018 TakePhoto. All rights reserved | Design by <a href="http://w3layouts.com">TakePhoto Team</a></p>
+</div>
         
         <!-- js-scripts -->			
 		<!-- js -->

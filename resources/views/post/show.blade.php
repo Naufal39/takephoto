@@ -1,15 +1,29 @@
-@extends('layouts.app')
+
 @include('layouts.index')
 
-@section('content')
+@section('layouts')
+    @include('layouts.app')
+    
+@show
+
+<head>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+</head>
 
 <div class="container">
     <div class="row justify-content-center">
-
         <div class="col-md-8">
             <div class="card">
+           
                 <div class="card-header">{{$post->title}} | <small>{{ $post->categori->name}}</small>
-   
+                    <div class="pull-right">
+                       <a href="{{ route('post.pp', $post->user_id)}}">{{$post->user->name}}</a> 
+                    </div>
               </div>
 
             <div class="card-body">
@@ -25,6 +39,7 @@
 
                 @foreach ($post->comments()->get() as $comment)
                     <div class="panel-body">
+
                         <h5> 
                             <strong> {{ $comment->user->name }} </strong> 
                             <small>  - {{$comment->created_at}} </small> 
@@ -56,23 +71,23 @@
 			<h3 class="title-w3l">Pesan Sekarang</h3>
 				<div class="contact-grid1">
 					<div class="contact-top1">
-						<form action="#" method="post">
-							<div class="form-group">
-								<label>Name*</label>
-								<input type="text" name="Name" placeholder="Name" required="">
-							</div>
-							<div class="form-group">
-								<label>E-mail*</label>
-								<input type="email" name="E-mail" placeholder="E-mail" required="">
-							</div>
+                        <form action="{{route('post.pesan')}}" method="post">
+                            {{csrf_field()}}
+                            <input type="hidden" name="id_photographer" value="{{ $post->user_id }}">
+                            <input type="hidden" name="id_categori" value="{{ $post->categori_id }}">
 							<div class="form-group">
 								<label>Phone Number*</label>
 								<input type="text" name="number" placeholder="Phone Number" required="">
+                            </div>
+                            <div class="form-group">
+								<label>Date*</label>
+                                <input  type="text" class="date form-control" name="tanggal" placeholder="dd-mm-yyyy ex:24-12-2018" required="">
 							</div>
 							<div class="form-group">
 								<label>Message*</label>
-									<textarea name="Message" placeholder="Message" required=""></textarea>
-							</div>
+									<textarea name="note" placeholder="Message" required=""></textarea>
+                            </div>
+
 								<input type="submit" value="Send" class="btn btn-ptimary" >
 						</form>
 					</div>
@@ -84,5 +99,13 @@
     </div>
 </div>
 
+<script type="text/javascript">
+
+    $('.date').datepicker({  
+
+       format: 'mm-dd-yyyy'
+
+     });  
+
+</script>  
     
-@endsection

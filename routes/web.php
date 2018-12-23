@@ -35,3 +35,14 @@ Route::post('post/pesan', 'PesanController@pesan')->name('post.pesan');
 Route::get('konten/filter', function(){
     return view('konten.filter');
 });
+//admin routes
+Route::get('/register/admin', 'AdminController@create');
+Route::get('/login/admin', 'AdminController@loginAdmin');
+Route::post('/register/admin', 'AdminController@registerAdmin')->name('register.admin');
+Route::post('/login/admin', 'AdminController@adminAuth')->name('login.admin');
+
+//admin routes we want protected 
+Route::group(['middleware'=>'auth:admin'], function(){
+Route::get('/home/admin', 'AdminController@home');
+Route::post('/logout/admin', 'AdminController@logout')->name('logout.admin');
+});

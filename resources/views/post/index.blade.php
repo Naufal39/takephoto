@@ -10,9 +10,19 @@
           <div class="input-field col s12">
             <input type="text" class="validate" name="q">
             <label for="title">Cari</label>
-          </div>
+          </div style="display:inline-block">
            <button type="submit" class="btn btn-flat pink accent-3 waves-effect waves-light white-text right">Cari<i class="material-icons right">search</i></button>
+            <div class="form-group">
+                    <select name="categori_id" id="" class="form-control">
+                    @foreach ($categories as $categori) 
+                    <a href="#"> <option value="{{ $categori->id }}"> {{$categori->name}} </option> </a>
+                                           
+                    @endforeach
+                    </select>
+                </div>
     </div>
+  
+    
  </form>
     <div class="row justify-content-center">
         <div class="col-md-8">

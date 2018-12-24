@@ -26,9 +26,9 @@
                 </div>
                 <div class="skill-mf">
                   <p class="title-s">Skill</p>
-                  <span>HTML</span> <span class="pull-right">85%</span>
+                  <span>HTML</span> <span class="pull-right">30%</span>
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+                    <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="85" aria-valuemin="0"
                       aria-valuemax="100"></div>
                   </div>
                   <span>CSS3</span> <span class="pull-right">75%</span>

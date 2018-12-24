@@ -46,7 +46,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                            <li class="hidden"><a class="page-scroll" href="#page-top"></a>	</li>
 					<li><a class="page-scroll scroll" href="#about"> <strong>About</strong> </a></li>
 					<li><a class="page-scroll scroll" href="{{ route('post.index') }}"> <strong>Post</strong> </a></li>
-                    <li><a class="page-scroll scroll" href="{{route('konten.galeri')}}"> <strong>Gallery</strong> </a></li>
+                    <li><a class="page-scroll scroll" href="#   "> <strong>Gallery</strong> </a></li>
                     <li><a class="page-scroll scroll" href="{{url('konten/filter')}}"> <strong>Filter</strong> </a></li>
                     <li><a class="page-scroll scroll" href="#mail"> <strong>Mail Us</strong> </a></li>
                             <li class="nav-item">
@@ -61,7 +61,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<li class="hidden"><a class="page-scroll" href="#page-top"></a>	</li>
 					<li><a class="page-scroll scroll" href="#about"> <strong>About</strong> </a></li>
 					<li><a class="page-scroll scroll" href="{{ route('post.index') }}"> <strong>Post</strong> </a></li>
-                    <li><a class="page-scroll scroll" href="{{route('konten.galeri')}}"> <strong>Gallery</strong> </a></li>
+                    <li><a class="page-scroll scroll" href="#gallery"> <strong>Gallery</strong> </a></li>
                     <li><a class="page-scroll scroll" href="{{url('konten/filter')}}"> <strong>Filter</strong> </a></li>
                     <li><a class="page-scroll scroll" href="#mail"> <strong>Mail Us</strong> </a></li>
                     <li class="nav-item dropdown">

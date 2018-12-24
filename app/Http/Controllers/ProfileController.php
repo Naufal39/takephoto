@@ -9,7 +9,7 @@ class ProfileController extends Controller
 {
     public function profile(User $user){
 
-       return view('post.profile', compact('user'));
+       return view('post.userprofile', compact('user'));
     }
 
     public function photoprofile(User $user){

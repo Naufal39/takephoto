@@ -41,13 +41,17 @@
                                     @if (Route::has('login'))
 
                                         @auth
-                                        <form action="" method="post"> </form>
+
+                                        @if (auth()->id()==$post->user_id)
+                                            <form action="" method="post"> </form>
                                             {{csrf_field()}}
                                             {{method_field('delete')}}
 
                                             <a href="{{ route('post.edit', $post) }}" class="btn btn-flat blue darken-4 waves-effect waves-light white-text">Edit <i class="material-icons right">mode_edit</i></a>
                                             <a href="{{ route('post.destroy', $post) }}" onclick="return confirm('Yakin mau hapus data ini sob?')" class="btn btn-flat red darken-4 waves-effect waves-light white-text">Delete <i class="material-icons right">delete</i></a>
-                            
+                                
+                                        @endif
+                                        
                                         @endauth
                                         
                                     @endif
@@ -65,7 +69,7 @@
                      <br>
                      <br>
                 @endforeach
-                
+                {{$posts->render()}}
             </div>
         </div>
     </div>

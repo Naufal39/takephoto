@@ -36,6 +36,7 @@ class PostController extends Controller
         $tambah->user_id =  auth()->id();
         $tambah->title = $request['title'];
         $tambah->slug = str_slug($request['title']);
+         $tambah->harga = $request['harga'];
         $tambah->content= $request['content'];
         $tambah->categori_id = $request['categori_id'];
         
@@ -62,6 +63,7 @@ class PostController extends Controller
         $post->update([
             'title' => request('title'),
             'categori_id' => request('categori_id'),
+            'harga' => request('harga'),
             'content' => request('content'),
         ]);
 

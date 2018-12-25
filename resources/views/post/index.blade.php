@@ -75,4 +75,8 @@
     </div>
 </div>
 
+@section('footer')
+    @include('layouts.footer')
+@show
+
 @endsection

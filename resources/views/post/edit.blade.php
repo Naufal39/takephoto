@@ -70,6 +70,10 @@
             </div>
         </form>    
     </div>
+
+    @section('footer')
+    @include('layouts.footer')
+@show
   
     
 @endsection

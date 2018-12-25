@@ -27,9 +27,13 @@
               </div>
 
             <div class="card-body">
-                <img src="{{ asset('image/'.$post->gambar)  }}" style="max-height:200px;max-width:200px;margin-top:10px;">
+               <center>
+                   <img src="{{ asset('image/'.$post->gambar)  }}" style="max-height:400px;max-width:400px;margin-top:10px;margin-bottom:10px;">
    
-                <p> {{($post->content)}} </p>
+               </center> 
+               <p> <strong>Harga : </strong> Rp. {{($post->harga)}} <small>*dalam satuan jam</small> </p>
+                <p> <strong>Deskripi : </strong> {{($post->content)}} </p>
+
             </div>
                 </div>
                 <br>
@@ -82,6 +86,10 @@
                             <div class="form-group">
 								<label>Date*</label>
                                 <input  type="text" class="date form-control" name="tanggal" placeholder="dd-mm-yyyy ex:24-12-2018" required="">
+                            </div>
+                            <div class="form-group">
+								<label>Location*</label>
+                                <input  type="text" class="text" name="lokasi" placeholder="Where are you located?" required="">
 							</div>
 							<div class="form-group">
 								<label>Message*</label>
@@ -98,6 +106,7 @@
         </div>
     </div>
 </div>
+        
 
 <script type="text/javascript">
 

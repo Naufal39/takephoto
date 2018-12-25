@@ -16,6 +16,7 @@ class PesanController extends Controller
         $pesanan->id_categori = $request['id_categori'];
         $pesanan->id_photographer = $request['id_photographer'];
         $pesanan->no_hp = $request['number'];
+        $pesanan->lokasi = $request['lokasi'];
         $pesanan->tanggal = $request['tanggal'];
         $pesanan->note = $request['note'];
 

@@ -40,9 +40,14 @@
                     @endforeach
                     </select>
                 </div>
+            
+            <div class="form-group">
+                <label for="">Harga <small>*dalam satuan jam</small></label>
+                <input type="text" class="form-control" name="harga" placeholder="Harga">
+            </div>
 
             <div class="form-group">
-                <label for="">Content</label>
+                <label for="">Deskripsi</label>
                 <textarea class="form-control" name="content" rows="5" placeholder="Post Content"></textarea>
             </div>
 
@@ -64,4 +69,8 @@
             </div>
         </form>    
     </div>
+
+    @section('footer')
+    @include('layouts.footer')
+@show
 @endsection

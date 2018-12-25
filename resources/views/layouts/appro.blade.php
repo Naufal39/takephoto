@@ -75,7 +75,7 @@
                                 @endif
                             </li>
                         @else
-                            <li><a class="navbar-brand" href="{{ route('post.create') }}"> Write a Blog </a></li>
+                            <li><a class="navbar-brand" href="{{ route('post.create') }}"> Post Packet </a></li>
 
                             <li><a class="navbar-brand" href="{{ route('post.index') }}"> Post </a></li>
                             

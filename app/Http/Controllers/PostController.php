@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Categories;
 use App\User;
-
+use App\Pesan;
 
 class PostController extends Controller
 {
@@ -36,7 +36,7 @@ class PostController extends Controller
         $tambah->user_id =  auth()->id();
         $tambah->title = $request['title'];
         $tambah->slug = str_slug($request['title']);
-         $tambah->harga = $request['harga'];
+        $tambah->harga = $request['harga'];
         $tambah->content= $request['content'];
         $tambah->categori_id = $request['categori_id'];
         
@@ -92,14 +92,24 @@ class PostController extends Controller
         return redirect()->route('post.index')->with('success', 'Berhasil diedit');
     }
 
-    public function destroy(Post $post){
-        $post->delete();
+    // public function destroy(Post $post){
+    //     $post = Post::where('id',$id)->first();
+    //     $post->delete();
+
+    //     return redirect()->route('post.index')->withDanger('Berhasil dihapus');
+    // }
+
+     public function destroy($post){
+        $hapus = Post::find($post)->first();
+        $hapus->delete();
 
         return redirect()->route('post.index')->withDanger('Berhasil dihapus');
     }
 
-    public function show(Post $post){
-        return view('post.show', compact('post'));
+    public function show(Post $post, Pesan $pesan){
+        $pesanku=Pesan::all();
+
+        return view('post.show', compact('post', 'pesan'));
     }
 
     public function galeri(){

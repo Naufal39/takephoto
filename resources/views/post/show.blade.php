@@ -93,7 +93,7 @@
 							</div>
 							<div class="form-group">
 								<label>Message*</label>
-									<textarea name="note" placeholder="Message" required=""></textarea>
+									<textarea name="note" placeholder="Message"></textarea>
                             </div>
 
 								<input type="submit" value="Send" class="btn btn-ptimary" >

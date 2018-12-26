@@ -25,7 +25,8 @@ Route::post('/post/create', 'PostController@store')->name('post.store');
 Route::get('post/{post}','PostController@show')->name('post.show');
 Route::get('post/{post}/edit','PostController@edit')->name('post.edit');
 Route::patch('post/{post}/edit','PostController@update')->name('post.update');
-Route::delete('post/{post}/delete', 'PostController@destroy')->name('post.destroy');
+// Route::delete('post/{post}/delete', 'PostController@destroy')->name('post.destroy');
+Route::get('post/{post}/delete', 'PostController@destroy')->name('post.destroy');
 Route::post('post/{post}/comment', 'PostCommentController@store')->name('post.comment.store');
 Route::get('query', 'CariController@search')->name('post.result');
 Route::get('/galeri/','PostController@galeri')->name('konten.galeri');
@@ -46,3 +47,4 @@ Route::group(['middleware'=>'auth:admin'], function(){
 Route::get('/home/admin', 'AdminController@home');
 Route::post('/logout/admin', 'AdminController@logout')->name('logout.admin');
 });
+Route::post('pesan/sukses', 'PesanController@sukses')->name('pesan.sukses');

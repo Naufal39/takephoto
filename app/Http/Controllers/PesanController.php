@@ -22,6 +22,11 @@ class PesanController extends Controller
 
         $pesanan->save();
 
-        return view('home');
+         return view('konten.sukses'); 
+    }
+
+    public function sukses(Request $request, Post $post, User $user, Pesan $pesan){
+
+        return view('konten.sukses'); 
     }
 }

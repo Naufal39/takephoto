@@ -28,10 +28,10 @@
 
             <div class="card-body">
                <center>
-                   <img src="{{ asset('image/'.$post->gambar)  }}" style="max-height:400px;max-width:400px;margin-top:10px;margin-bottom:10px;">
-   
+                   <img src="{{ asset('image/'.$post->gambar)  }}" style="height:450px;width:700px;margin-top:10px;margin-bottom:10px;">
                </center> 
                <p> <strong>Harga : </strong> Rp. {{($post->harga)}} <small>*dalam satuan jam</small> </p>
+               <p> <strong>Contact Person : </strong> {{$post->user->number_hp}} </p>
                 <p> <strong>Deskripi : </strong> {{($post->content)}} </p>
 
             </div>
@@ -79,6 +79,7 @@
                             {{csrf_field()}}
                             <input type="hidden" name="id_photographer" value="{{ $post->user_id }}">
                             <input type="hidden" name="id_categori" value="{{ $post->categori_id }}">
+                            <input type="hidden" name="harga" value="{{ $post->harga }}">
 							<div class="form-group">
 								<label>Phone Number*</label>
 								<input type="text" name="number" placeholder="Phone Number" required="">

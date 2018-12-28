@@ -35,7 +35,7 @@
 		<div class="notfound">
 			<div class="notfound-404">
                 <h2>Hi, {{Auth::user()->name}}</h2>
-                <i class="fas fa-camera-retro"></i>
+                <img src="{{asset('images/dslr.png')}}" style="max-height:150px;" alt="">
 			</div>
 			<h2>Pesanan Photoshoot Telah Dibuat Persiapkan diri anda untuk sesi photo</h2>
 			<form>

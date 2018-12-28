@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Categories;
 use App\Post;
+use App\Pesan;
 
 class Pesan extends Model
 {
@@ -16,10 +17,10 @@ class Pesan extends Model
     }
 
     public function usern(){
-        return $this->belongsTo(User::class);
+        return $this->hasMany(User::class);
     }
 
     public function categore(){
-        return $this->belongsTo(Categories::class);
+        return $this->hasMany(Categories::class);
     }
 }

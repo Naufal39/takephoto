@@ -31,6 +31,8 @@ Route::post('post/{post}/comment', 'PostCommentController@store')->name('post.co
 Route::get('query', 'CariController@search')->name('post.result');
 Route::get('/galeri/','PostController@galeri')->name('konten.galeri');
 Route::get('user/{id}', 'ProfileController@profile')->name('post.profile');
+Route::get('user/{id}/edit', 'ProfileController@editpro')->name('profile.edit');
+Route::patch('user/{id}/', 'ProfileController@updatepro')->name('profile.update');
 Route::get('kangphoto/{user_id}', 'ProfileController@photoprofile')->name('post.pp');
 Route::post('post/pesan', 'PesanController@pesan')->name('post.pesan');
 Route::get('konten/filter', function(){

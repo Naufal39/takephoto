@@ -17,11 +17,28 @@
                   </div>
                   <div class="col-sm-6 col-md-7">
                     <div class="about-info">
-                      <p><span class="title-s">Name: </span> <span>{{Auth::user()->name}}</span></p>
-                      <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
-                      <p><span class="title-s">Email: </span> <span>{{Auth::user()->email}}</span></p>
-                      <p><span class="title-s">Phone: </span> <span>{{Auth::user()->number_hp}}</span></p>
-                    </div>
+                        <form action="{{ route('profile.update',Auth::user() ) }}" method="post">
+                            {{csrf_field()}}
+                              {{method_field('PATCH')}}
+                            <div class="form-group">
+                                <p><span class="title-s">Name: </span> <span> <input type="text" class="form-control" name="name" value="{{Auth::user()->name}}"></span></p>
+                            </div>
+                            <div class="form-group">
+                                <p><span class="title-s">Profile: </span> <span>Profesional Photographer</span></p>
+                            </div>
+                            <div class="form group">
+                                <p><span class="title-s">Email: </span> <span>{{Auth::user()->email}}</span></p>
+                            </div>
+                            <div class="form-group">
+                                <p><span class="title-s">Phone: </span> <span><input type="text" class="form-control" name="number_hp" value="{{Auth::user()->number_hp}}"></span></p>
+                            </div>
+                            
+                    
+                          <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="save">
+            </div>
+        </form>
+                      </div>
                   </div>
                 </div>
                 <div class="skill-mf">
@@ -71,7 +88,8 @@
                 </div>
               </div>
             </div>
-          </div>
+           
+            </div>
         </div>
       </div>
     </div>
@@ -84,7 +102,7 @@
         <div class="col-sm-12">
           <div class="title-box text-center">
             <h3 class="title-a">
-              Services
+              Pesanan
             </h3>
             <p class="subtitle-a">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -100,11 +118,9 @@
               <span class="ico-circle"><i class="ion-monitor"></i></span>
             </div>
             <div class="service-content">
-              <h2 class="s-title">Web Design</h2>
+              <h2 class="s-title">Pertama</h2>
               <p class="s-description text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                provident vitae! Magni
-                tempora perferendis eum non provident.
+                
               </p>
             </div>
           </div>
@@ -114,8 +130,8 @@
             <div class="service-ico">
               <span class="ico-circle"><i class="ion-code-working"></i></span>
             </div>
-            <div class="service-content">
-              <h2 class="s-title">Web Development</h2>
+              <div class="service-content">
+              <h2 class="s-title">Photography</h2>
               <p class="s-description text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
                 provident vitae! Magni
@@ -144,8 +160,8 @@
             <div class="service-ico">
               <span class="ico-circle"><i class="ion-android-phone-portrait"></i></span>
             </div>
-            <div class="service-content">
-              <h2 class="s-title">Responsive Design</h2>
+             <div class="service-content">
+              <h2 class="s-title">Photography</h2>
               <p class="s-description text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
                 provident vitae! Magni
@@ -159,8 +175,8 @@
             <div class="service-ico">
               <span class="ico-circle"><i class="ion-paintbrush"></i></span>
             </div>
-            <div class="service-content">
-              <h2 class="s-title">Graphic Design</h2>
+              <div class="service-content">
+              <h2 class="s-title">Editing</h2>
               <p class="s-description text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
                 provident vitae! Magni
@@ -174,8 +190,8 @@
             <div class="service-ico">
               <span class="ico-circle"><i class="ion-stats-bars"></i></span>
             </div>
-            <div class="service-content">
-              <h2 class="s-title">Marketing Services</h2>
+             <div class="service-content">
+              <h2 class="s-title">Photography</h2>
               <p class="s-description text-center">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
                 provident vitae! Magni
@@ -350,7 +366,6 @@
             </a>
           </div>
         </div>
-        
       </div>
     </div>
   </section>

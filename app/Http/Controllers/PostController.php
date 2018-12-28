@@ -99,8 +99,8 @@ class PostController extends Controller
     //     return redirect()->route('post.index')->withDanger('Berhasil dihapus');
     // }
 
-     public function destroy($post){
-        $hapus = Post::find($post)->first();
+     public function destroy($id){
+        $hapus = Post::find($id)->first();
         $hapus->delete();
 
         return redirect()->route('post.index')->withDanger('Berhasil dihapus');

@@ -10,7 +10,7 @@ use App\Pesan;
 
 class PesanController extends Controller
 {
-    public function pesan(Request $request){
+    public function pesan(Request $request, Post $post){
         $pesanan = new Pesan();
         $pesanan->id_pemesan = auth()->id();
         $pesanan->id_categori = $request['id_categori'];
@@ -19,6 +19,7 @@ class PesanController extends Controller
         $pesanan->lokasi = $request['lokasi'];
         $pesanan->tanggal = $request['tanggal'];
         $pesanan->note = $request['note'];
+        $pesanan->harga = $request['harga'];
 
         $pesanan->save();
 

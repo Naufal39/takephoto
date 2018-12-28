@@ -47,8 +47,13 @@
                     </select>
                 </div>
 
+                 <div class="form-group">
+                <label for="">Harga <small>*dalam satuan jam</small></label>
+                <input type="text" class="form-control" name="harga" placeholder="Harga" value="{{ $post->harga }}">
+            </div>
+
             <div class="form-group">
-                <label for="">Content</label>
+                <label for="">Deskripsi</label>
                 <textarea class="form-control" name="content" rows="5" placeholder="Post Content"> {{ $post->content }} </textarea>
             </div>
 

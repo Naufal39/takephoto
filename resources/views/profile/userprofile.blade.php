@@ -71,6 +71,7 @@
                 </div>
               </div>
             </div>
+            <a href="{{ route('profile.edit', Auth::user() ) }}" class="btn btn-flat blue darken-4 waves-effect waves-light white-text">Edit <i class="material-icons right">mode_edit</i></a>
           </div>
         </div>
       </div>
@@ -84,7 +85,7 @@
         <div class="col-sm-12">
           <div class="title-box text-center">
             <h3 class="title-a">
-              Services
+              Pesanan
             </h3>
             <p class="subtitle-a">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -100,11 +101,9 @@
               <span class="ico-circle"><i class="ion-monitor"></i></span>
             </div>
             <div class="service-content">
-              <h2 class="s-title">Web Design</h2>
+              <h2 class="s-title">Pertama</h2>
               <p class="s-description text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                provident vitae! Magni
-                tempora perferendis eum non provident.
+                
               </p>
             </div>
           </div>
@@ -350,7 +349,6 @@
             </a>
           </div>
         </div>
-        
       </div>
     </div>
   </section>
@@ -369,40 +367,40 @@
                 <div class="col-md-6">
                   <div class="title-box-2">
                     <h5 class="title-left">
-                      Send Message Us
+                      Booking Photo Sekarang
                     </h5>
                   </div>
                   <div>
-                      <form action="" method="post" role="form" class="contactForm">
+                      <form action="{{route('post.pesan')}}" method="post" class="contactForm">
                       <div id="sendmessage">Your message has been sent. Thank you!</div>
                       <div id="errormessage"></div>
                       <div class="row">
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                            <input type="text" name="no_hp" class="form-control" id="name" placeholder="Your Phone Number" data-msg="Please enter at least 4 chars" />
                             <div class="validation"></div>
                           </div>
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                            <input type="text" class="form-control" name="lokasi" id="email" placeholder="Your Located" required=""/>
                             <div class="validation"></div>
                           </div>
                         </div>
                         <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                              <input  type="text" class="date form-control" name="tanggal" placeholder="dd-mm-yyyy ex:24-12-2018" required="">
                               <div class="validation"></div>
                             </div>
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="note" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                             <div class="validation"></div>
                           </div>
                         </div>
                         <div class="col-md-12">
-                          <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                          <button type="submit" class="button button-a button-big button-rouded">Pesan</button>
                         </div>
                       </div>
                     </form>
@@ -484,5 +482,24 @@
 
   <!-- Template Main Javascript File -->
   <script src="{{asset('profile/js/main.js')}}"></script>
+
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+
+  <script type="text/javascript">
+
+    $('.date').datepicker({  
+
+       format: 'mm-dd-yyyy'
+
+     });  
+
+</script>  
+    
     
 @endsection
+
